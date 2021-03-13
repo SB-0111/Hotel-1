@@ -263,13 +263,13 @@ public class main {
 		}
 	}
 	
-	public void imprimirReserva(String direccion, String codigo) throws IOException, noExisteReseña, noSeEncuentraReseña {
+	public void imprimirReseña(String direccion, String codigo) throws IOException, noExisteReseña, noSeEncuentraReseña {
 		
 		FileWriter fw = new FileWriter(direccion);
 		PrintWriter pw = new PrintWriter(fw);
 		
 		if(existeReseña(codigo)==true) {
-			pw.print(buscarReseña(codigo));
+			pw.print(buscarReseña(codigoCliente));
 		}
 		pw.close();
 	}
